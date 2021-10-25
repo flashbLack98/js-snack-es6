@@ -24,27 +24,42 @@ const listaBici = [
 ];
 
 
-function confrontoBici(...listaBici) {
-    for (i = 0; i < listaBici.length; i++) {
-        const { peso } = listaBici[i];
+function confrontoBici(lista) {
+    const pesoBici = [];
+
+    for (i = 0; i < lista.length; i++) {
+        const { peso } = lista[i];
         pesoBici.push(peso);
 
 
         //devo stampare la bici con il peso minore
 
     }
+    const pesoMin = Math.min(...pesoBici);
+    console.log("questo è il peso minore dele bici", pesoMin);
+
+    for (let i = 0; i < lista.length; i++) {
+        const bici = lista[i];
+
+        if (pesoMin === bici["peso"]) {
+            return bici;
+        }
+    }
 
 }
 
 
-const pesoBici = [];
+
+
+
 
 console.log("questa è la lista delle bici ", listaBici);
 
-confrontoBici(...listaBici);
+confrontoBici(listaBici);
+console.log(confrontoBici(listaBici));
 
 
-console.log("questo è il peso minore dele bici", Math.min(...pesoBici));
+
 
 
 

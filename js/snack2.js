@@ -4,32 +4,51 @@ Generare numeri random al posto degli 0 nelle proprietà:
 Punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
 
-/*
+
 const squadreCalcio = [
     {
         nome: "Inter",
-        falli: 0,
+        falliSubiti: 0,
         punti: 0
     },
     {
         nome: "Milan",
-        falli: 0,
+        falliSubiti: 0,
         punti: 0
     },
     {
         nome: "Napoli",
-        falli: 0,
+        falliSubiti: 0,
         punti: 0
     },
     {
         nome: "Roma",
-        falli: 0,
+        falliSubiti: 0,
         punti: 0
     },
 ];
 
+const squadreNew = [];
+
 function generazioneRandom() {
-    Math.ceil(Math.random() * 10);
-    console.log(Math.ceil(Math.random() * 10));
+    return Math.ceil(Math.random() * 10);
 }
-generazioneRandom(); */
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+    let { nome, falliSubiti, punti } = squadreCalcio[i];
+    squadreCalcio[i].falliSubiti = generazioneRandom();
+    squadreCalcio[i].punti = generazioneRandom();
+    falli = squadreCalcio[i].falliSubiti;
+    punti = squadreCalcio[i].punti;
+
+
+    const squadra = { nome, punti };
+    squadreNew.push(squadra);
+
+
+}
+console.log("questa è il vecchio array", squadreCalcio);
+console.log("questa è il nuovo array", squadreNew);
+
+
+

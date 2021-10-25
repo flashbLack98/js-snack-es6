@@ -19,6 +19,10 @@ const listaBici = [
     {
         nome: "Yonshu",
         peso: 4
+    },
+    {
+        nome: "Lotus",
+        peso: 1
     }
 
 ];
@@ -49,14 +53,10 @@ function confrontoBici(lista) {
 }
 
 
-
-
-
-
 console.log("questa è la lista delle bici ", listaBici);
 
 confrontoBici(listaBici);
-console.log(confrontoBici(listaBici));
+console.log(`la bici più leggera è la ${confrontoBici(listaBici).nome} e pesa ${confrontoBici(listaBici).peso} kg`);
 
 
 
